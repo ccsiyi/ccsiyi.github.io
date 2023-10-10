@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title> Demo 2 </title>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	void main(){
+		gl_Position = vPosition;
+	}
+	</script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	void main(){
+		gl_FragColor = vec4( 0.2, 0.2, 0.3, 1.0 );
+	}
+	</script>
+
+    <script type="text/javascript" src="../js/common/webgl-utils.js"></script>
+    <script type="text/javascript" src="../js/common/initShaders.js"></script>
+    <script type="text/javascript" src="../js/common/gl-matrix-min.js"></script>
+
+    <script type="text/javascript" src="../js/ch02/demo-2.js"></script>
+</head>
+
+<body>
+	请输入剖分的层次(0-4)：<input type="text" id="count" />
+	请输入旋转度数：<input type="text" id="xCount" />
+	<input type="submit" onclick="submit()" />
+    <h2>Triangle Tessellation</h2>
+    <canvas id="gl-canvas" width="700" height="700">你的浏览器不支持HTML5 canvas元素</canvas>
+</body>
+
+</html>
